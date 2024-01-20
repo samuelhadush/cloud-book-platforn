@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import Books from "./components/Books";
 import Section from "./components/Section";
+import EditSection from "./components/EditSection";
 
 // Router singleton created
 const router = createBrowserRouter([{ path: "*", Component: Root }]);
@@ -32,7 +33,7 @@ function Root() {
           <Route path="/" element={<Books />} />
           <Route path="/books" element={<Books />} />
           {/* <Route path="/sections" element={<Section />} /> */}
-          {/* <Route path="/sections/:sectionId" element={<Section />} /> */}
+          <Route path="/sections/:sectionId" element={<EditSection />} />
           <Route path="/profile" element={<UserProfile />} />
         </Route>
       </Routes>

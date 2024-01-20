@@ -16,7 +16,13 @@ const useFetch = () => {
         Authorization: `Bearer ${getToken()}`,
       },
     }).then(async(res)=>res.json()).catch((err)=>err);
-  return { getBooks, getSections };
+  const getSectionById = (()=>async (id:number) => await fetch(`${import.meta.env.VITE_API}/sections/${id}`, {
+      method: "GET",
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${getToken()}`,
+      },
+    }).then(async( res)=>await res.json()).catch((err)=>err))();
+  return { getBooks, getSections,getSectionById };
 };
-
 export default useFetch;

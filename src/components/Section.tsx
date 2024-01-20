@@ -5,6 +5,7 @@ import { Pencil1Icon } from "@radix-ui/react-icons";
 import useFetch from "../hooks/useFetch";
 import Loader from "./ui/Loader";
 import ShowError from "./ui/ShowError";
+import { Link } from "react-router-dom";
 export type DataType = {
   data: {
     id: number;
@@ -27,9 +28,9 @@ export default function Section({ data }: DataType) {
         >
           Section
         </Button>
-        <Button className="p-2 rounded-md  hover:bg-slate-200">
+        <Link to={`/sections/${data.id}`} className="p-2 rounded-md  hover:bg-slate-200">
           <Pencil1Icon />
-        </Button>
+        </Link>
       </div>
       {data.sectionId && showSections && (
         <RecursiveComponent sectionId={data.sectionId} />
