@@ -14,7 +14,7 @@ const BookCard = ({ children,onClick, ...book }: BookProps) => {
   return (
     <div className="flex first:border-t  py-2 last:border-b  flex-col gap-1">
       <h2>{book.title}</h2>
-      <div className="flex px-6 py-2 justify-between text-slate-400">
+      <div className="flex px-2 py-2 justify-between text-slate-400">
         <Button onClick={onClick} className="p-2 rounded-md hover:bg-slate-200">
           <SectionIcon />
         </Button>

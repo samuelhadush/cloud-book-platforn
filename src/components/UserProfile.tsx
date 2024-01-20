@@ -2,26 +2,26 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as Select from '@radix-ui/react-select';
+import * as Select from "@radix-ui/react-select";
 import { toast } from "sonner";
-import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
+import { CheckIcon, ChevronDownIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { profileSchema } from "./SignUp";
 import { useAuth } from "../hooks/useAuth";
 
 export default function UserProfile() {
-  const { setCookies,getUser } = useAuth();
-  const user=getUser()
+  const { setCookies, getUser } = useAuth();
+  const user = getUser();
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({ defaultValues:user });
+  } = useForm({ defaultValues: user });
   // update profile
   const handleProfile = handleSubmit(async (data) => {
     console.log(data);
-    const res = await fetch(`http://localhost:8181/users/:${user.id}`, {
+    const res = await fetch(`${import.meta.env.VITE_API}/users/:${user.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -38,7 +38,10 @@ export default function UserProfile() {
     <div className="flex w-screen h-screen flex-col items-center justify-center bg-slate-100 ">
       <div className="flex flex-col p-6 bg-white rounded-lg border border-slate-300">
         <h1 className="text-gray-800 font-semibold">Update Profile</h1>
-        <form className="flex flex-col gap-4 mt-4 w-80 " onSubmit={handleProfile}>
+        <form
+          className="flex flex-col gap-4 mt-4 w-80 "
+          onSubmit={handleProfile}
+        >
           <input
             className="rounded-md border border-slate-200 px-2 py-1 text-black focus:outline-slate-300"
             {...register("email")}

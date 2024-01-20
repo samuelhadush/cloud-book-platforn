@@ -17,7 +17,7 @@ export default function SignIn() {
   const navigate=useNavigate()
 
   const handleLogin = handleSubmit(async(data)=> {
-    const res = await fetch('http://localhost:8181/login', {
+    const res = await fetch(`${import.meta.env.VITE_API}/login`, {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify(data)

@@ -18,7 +18,7 @@ export default function Section({ data }: DataType) {
   const [showSections, setShowSections] = React.useState<boolean>(false);
   console.log(data);
   return (
-    <div className="flex flex-col ml-2 py-4 px-4 border-l border-slate-200">
+    <div className="flex flex-col ml-2 py-4 pl-4 border-l border-slate-200">
       <h1>{data.title}</h1>
       <div className="flex gap-2 justify-between ">
         <Button

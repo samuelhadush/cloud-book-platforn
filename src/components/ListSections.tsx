@@ -13,7 +13,7 @@ type Props = {
 
 function ListSections({ sections }: Props) {
   return (
-    <div className="flex flex-col divide-y-2 divide-slate-200 gap-2 border-l border-slate-200">
+    <div className="flex flex-col divide-y-2 mx-2 divide-slate-200 gap-2 border-l border-slate-200">
       {sections.map((section) => {
         return <Section key={section.id} data={section} />;
       })}

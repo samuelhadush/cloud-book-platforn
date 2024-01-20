@@ -19,7 +19,7 @@ export default function SignUp() {
   const {setCookies}= useAuth()
   // handle a login 
   const handleLogin =handleSubmit(async(data)=> {
-    const res= await fetch('http://localhost:8181/users', {
+    const res= await fetch(`${import.meta.env.VITE_API}/users`, {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify(data)
