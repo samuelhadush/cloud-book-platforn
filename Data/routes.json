@@ -1,0 +1,6 @@
+{
+    "/books/:bookId": "/books/:bookId",
+    "/books/:bookId/sections": "/sections?bookId=:bookId",
+    "/books/:bookId/sections/:sectionId/subsections": "/subsections?parentId=:sectionId"
+  }
+  

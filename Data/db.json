@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "authorUser",
+      "password": "hashedPassword",
+      "role": "author"
+    },
+    {
+      "id": 2,
+      "username": "collaboratorUser",
+      "password": "hashedPassword",
+      "role": "collaborator"
+    },
+    {
+      "email": "author@gmail.com",
+      "password": "$2a$10$oihQMEeqZHRn3O0Q31hrU.LOi1OTK1PeaHhY9lcaAwmlZOIjmEpwK",
+      "role": "Collaborator",
+      "id": 3
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Sample Book",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Another Book",
+      "authorId": 2
+    }
+  ],
+  "sections": [
+    {
+      "id": 101,
+      "title": "Introduction",
+      "bookId": 1,
+      "sectionId": null
+    },
+    {
+      "id": 102,
+      "title": "Chapter 1",
+      "bookId": 1,
+      "sectionId": null
+    },
+    {
+      "id": 103,
+      "title": "Prologue",
+      "bookId": 2,
+      "sectionId": null
+    },
+    {
+      "id": 104,
+      "title": "Chapter 1",
+      "bookId": 2,
+      "sectionId": null
+    },
+    {
+      "id": 105,
+      "title": "Intro to Platform",
+      "bookId": 1,
+      "sectionId": 101
+    },
+    {
+      "id": 106,
+      "title": "Intro to Book Writing",
+      "bookId": 1,
+      "sectionId": 101
+    },
+    {
+      "id": 107,
+      "title": "Section 1.1",
+      "bookId": 1,
+      "sectionId": 102
+    },
+    {
+      "id": 108,
+      "title": "Section 1.2",
+      "bookId": 1,
+      "sectionId": 102
+    },
+    {
+      "id": 109,
+      "title": "Opening Scene",
+      "bookId": 2,
+      "sectionId": 103
+    },
+    {
+      "id": 110,
+      "title": "Introduction to Characters",
+      "bookId": 2,
+      "sectionId": 104
+    }
+  ]
+}
